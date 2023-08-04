@@ -1,0 +1,52 @@
+docker --version
+docker pull ubuntu {to get the image of ubuntu}
+[if anything not mentioned it will download the latest version]
+For specific verison=> docker pull ubuntu:18.04
+docker images[to show all downloaded images]
+docker run ubuntu[to create the container]
+docker ps[gives running container's info.]
+docker ps -a[to get the status of all the containers]
+docker rum -d ubuntu[give you the id of the created new container which will go to the exit state]
+docker run -it ubuntu[it run the image of ubuntu in interactive manner, now we can work in that container]
+docler exec -it [name/id] bash
+
+
+to update the ubuntu=[apt update]
+to download net-tools=[apt-get install net-tools]
+to get the ip=[ifconfig]
+[exit]=tocome out of the container
+docker run-it ubuntu bash[it will run the image container in the background and sent it to the up state]
+update the container-> apt install apache2[to install the apache2 in the container]
+service apache2 status[to get its status]
+service apache2 start[to start the service]
+docker commit container_id image_name[given by you]
+[create the image of the running container]
+docker images[to list out the images]
+docker rm container_id[to remove the container that is in exit state]
+docker stop container_id[to stop the running docker]
+docker rmi image_name[to delte the image]
+docker rmi -f image_name[to force delte the image]
+docker run --name gla -it ubuntu
+
+docker run --name [ner container name] -itd -p 9090:80 [image name]
+[to create the container that is already apache2 is present that can be access using browser]
+
+
+
+
+
+Dockerfile:-
+Dockercompose:-
+
+vi Dockerfile=to open the txt file
+docker run --name tim -p 9090:80 itd ubuntu:v1[to create the container and port initiqlization]
+docker build --tag centos_apache:v1[name by you : tag by you] .=>to create the image of the file
+
+
+
+
+Docker Volume:
+
+docker inspect container_id[to get its configurations]
+docker run -d --name tim -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql(image name)[to create a container in a environment ]
+ 

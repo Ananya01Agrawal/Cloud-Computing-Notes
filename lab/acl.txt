@@ -1,0 +1,31 @@
+/***
+
+    Author : Khushal Agarwal
+    Created : 30 - 11 - 2022
+
+***/
+
+## Command for static routing :-
+ip route source_address subnet_mask next_hop_address
+
+## Command for dynamic routing :-
+ip route source_address(0.0.0.0) subnet_mask(0.0.0.0) next_hop_address
+
+Standard acl - 1 to 99
+Extended acl - 100 to 199
+
+## Command to configure acl:-
+
+ip access-list standard/extended acl_number // to create acl
+
+permit/deny ip source_address source_mask(0.255.255.255) destination_address destination_mask // to add rule in acl
+
+interface interface_name // to apply acl on interface
+
+ip access-group acl_number in/out // to apply acl on interface
+
+show access-lists // to show all acl
+
+show access-lists acl_number // to show specific acl
+
+
